@@ -6,13 +6,15 @@ import Shop from "./components/Shop";
 import News from "./components/News";
 import Login from "./components/Login";
 import Application from "./components/Application";
-import AdminMain from "./admin/AdminMain";
+
 import NewsDetails from "./components/NewsDetails";
 import ProduitDetails from "./components/ProduitDetails";
 import ProductList from "./admin/ProductList";
 import AddProduct from "./admin/AddProduct";
 import EditProduct from "./admin/EditProduct";
 import NewsList from "./admin/NewsList";
+import AddNews from "./admin/AddNews";
+import EditNews from "./admin/EditNews";
 function App() {
 	return (
 		<>
@@ -26,13 +28,14 @@ function App() {
 				<Route path="/news/:id" element={<NewsDetails />} />
 
 				<Route path="/application" element={<Application />} />
-				<Route path="/admin" element={<AdminMain />} />
+
 				<Route path="/admin/products" element={<ProductList />} />
 				<Route path="/admin/addProduct" element={<AddProduct />} />
 				<Route path="/admin/editProduct/:id" element={<EditProduct />} />
 
 				<Route path="/admin/news" element={<NewsList />} />
-				{/* <Route path="/template" lement={<Template />} /> */}
+				<Route path="/admin/editNews/:id" element={<EditNews />} />
+				<Route path="/admin/addNews" element={<AddNews />} />
 			</Routes>
 		</>
 	);

@@ -17,7 +17,20 @@ export default function NewsList() {
 				console.error("There was an error fetching the news!", error);
 			});
 	}, []);
-
+	const handleDelete = (id) => {
+		if (window.confirm("Are you sure you want to delete this news?")) {
+			axios
+				.delete(`http://localhost:3001/news/${id}`)
+				.then(() => {
+					alert("news deleted successfully");
+					// Optionally, update state to remove the deleted product from the list
+					setListnews(listnews.filter((n) => n.id !== id));
+				})
+				.catch((error) => {
+					console.error("Error deleting product:", error);
+				});
+		}
+	};
 	return (
 		<>
 			<div className="container">
@@ -57,7 +70,7 @@ export default function NewsList() {
 									type="submit"
 									className="btnSave bg-1 text-fff text-bold fr"
 								>
-									<Link to="/admin/addProduct">
+									<Link to="/admin/addNews">
 										<a href="#" className="btnAdd fa fa-plus bg-1 text-fff" />
 										Add News
 									</Link>
@@ -90,9 +103,9 @@ export default function NewsList() {
 													to={`/admin/editnews/${news.id}`}
 													className="btnEdit fa fa-pencil bg-3 text-fff"
 												/>
-												<Link
-													to={`/admin/editnews/${news.id}`}
+												<button
 													className="btnRemove fa fa-trash bg-2 text-fff"
+													onClick={() => handleDelete(news.id)}
 												/>
 											</td>
 										</tr>

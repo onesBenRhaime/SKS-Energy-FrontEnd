@@ -3,7 +3,6 @@ import axios from "axios";
 import "./style-admin.css";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
-import { Alert } from "react-bootstrap";
 
 export default function ProductList() {
 	const [products, setProducts] = useState([]);
@@ -22,7 +21,7 @@ export default function ProductList() {
 		if (window.confirm("Are you sure you want to delete this product?")) {
 			axios
 				.delete(`http://localhost:3001/produits/${id}`)
-				.then((response) => {
+				.then(() => {
 					alert("Product deleted successfully");
 					// Optionally, update state to remove the deleted product from the list
 					setProducts(products.filter((product) => product.id !== id));
