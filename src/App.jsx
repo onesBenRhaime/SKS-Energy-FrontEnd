@@ -15,6 +15,7 @@ import EditProduct from "./admin/EditProduct";
 import NewsList from "./admin/NewsList";
 import AddNews from "./admin/AddNews";
 import EditNews from "./admin/EditNews";
+import BoiteContact from "./admin/boiteContact";
 function App() {
 	return (
 		<>
@@ -36,6 +37,8 @@ function App() {
 				<Route path="/admin/news" element={<NewsList />} />
 				<Route path="/admin/editNews/:id" element={<EditNews />} />
 				<Route path="/admin/addNews" element={<AddNews />} />
+
+				<Route path="/admin/contact" element={<BoiteContact />} />
 			</Routes>
 		</>
 	);

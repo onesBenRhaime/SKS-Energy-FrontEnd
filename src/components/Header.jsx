@@ -13,16 +13,20 @@ export default function Header() {
 				<div className="header_bottom">
 					<div className="container-fluid">
 						<nav className="navbar navbar-expand-lg custom_nav-container">
-							<Link className="navbar-brand" to="/">
+							<Link className=" d-flex navbar-brand  row" to="/">
 								<span>
 									<img
 										src={logo}
+										className="col"
 										style={{ height: "100px", width: "100px", float: "left" }}
 										alt="SKS Logo"
 									/>
 								</span>
-								<p style={{ color: "rgb(122, 175, 255)", marginTop: "35px" }}>
-									Your energy is our passion
+								<p
+									style={{ color: "rgb(122, 175, 255)", marginTop: "35px" }}
+									className="col"
+								>
+									Your energy is our passion,
 								</p>
 							</Link>
 

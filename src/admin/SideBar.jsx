@@ -31,7 +31,7 @@ export default function SideBar() {
 						</Link>
 					</li>
 					<li>
-						<Link to="">
+						<Link to="/admin/contact">
 							<span className="fa fa-envelope-o" />
 							Contact
 						</Link>

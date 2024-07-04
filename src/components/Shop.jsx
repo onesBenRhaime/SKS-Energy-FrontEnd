@@ -1,7 +1,7 @@
 import EndSection from "./EndSection";
 import Header from "./Header";
 import "../App.css";
-import {  Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -63,32 +63,27 @@ export default function Shop() {
 								return (
 									<Col key={index} md={4} className="mt-2">
 										<Card>
-											<Card.Img
-												variant="top"
-												// src={produit.PhotoUrl1}
-												src={src}
-												height={250}
-											/>
+											<Link to={`${produit.id}`}>
+												<Card.Img
+													variant="top"
+													// src={produit.PhotoUrl1}
+													src={src}
+													width={250}
+												/>
+												<Card.Body>
+													<Card.Title>
+														{" "}
+														<h2>{produit.label}</h2>
+													</Card.Title>
 
-											<Card.Body>
-												<Card.Title>
-													{" "}
-													<h2>{produit.label}</h2>
-												</Card.Title>
-
-												<Card.Text>
-													<strong>Price :</strong> {produit.price}
-												</Card.Text>
-												<Card.Text>
-													<strong>Code :</strong> {produit.code}
-												</Card.Text>
-												<Link
-													to={`${produit.id}`}
-													className="btn btn-primary mt-4 col-4 justify-content-end"
-												>
-													More Details
-												</Link>
-											</Card.Body>
+													<Card.Text>
+														<strong>Price :</strong> {produit.price}
+													</Card.Text>
+													<Card.Text>
+														<strong>Code :</strong> {produit.code}
+													</Card.Text>
+												</Card.Body>{" "}
+											</Link>
 										</Card>
 									</Col>
 								);

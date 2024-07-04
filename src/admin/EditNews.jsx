@@ -61,7 +61,7 @@ export default function EditNews() {
 
 		// Envoyer les données au back-end
 		axios
-			.patch("http://localhost:3001/news/", news)
+			.patch(`http://localhost:3001/news/${id}`, news)
 			.then(() => {
 				alert("News edited successfully!");
 				navigate("/admin/news");

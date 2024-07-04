@@ -669,7 +669,14 @@ label {
     pointer-events: none;
 }
 
-
+/*CONTENTS CSS */
+.containerLogin {
+    display: flex;
+    display: -webkit-flex;
+    max-width: 1940px;
+    
+    transition: 0.5s;
+}
 /*CONTENTS CSS */
 .container {
     display: flex;
