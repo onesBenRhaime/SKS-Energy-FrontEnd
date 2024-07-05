@@ -32,8 +32,8 @@ function ProduitDetails() {
 					<div className=" mb-5 py-5  mt-5">
 						<Row>
 							<Col>
-								<Card.Img variant="top" src={src} height={250} />
-								{/* <Card.Img variant="top" src={produit.PhotoUrl1} height={250} /> */}
+								{/* <Card.Img variant="top" src={src} height={250} /> */}
+								<Card.Img variant="top" src={produit.PhotoUrl1} height={250} />
 							</Col>
 							<Col>
 								<Card.Body>

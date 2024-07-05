@@ -4,7 +4,6 @@ import logo from "../../public/images/SKS_Logo.png";
 export default function Header() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const openModal = () => setIsModalOpen(true);
 	const closeModal = () => setIsModalOpen(false);
 
 	return (
@@ -74,13 +73,10 @@ export default function Header() {
 									</li>
 									{/* login section */}
 									<li className="nav-item">
-										<button
-											className="btn btn-primary"
-											id="openModalBtn"
-											onClick={openModal}
-										>
+										<Link to="/login" className="btn btn-primary">
+											{" "}
 											Login
-										</button>
+										</Link>
 									</li>
 								</ul>
 							</div>

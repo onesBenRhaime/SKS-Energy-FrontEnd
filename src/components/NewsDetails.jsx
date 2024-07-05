@@ -66,7 +66,7 @@ export default function NewsDetails() {
 						<Card className=" mb-5 ">
 							<Row>
 								<Col>
-									<Card.Img variant="top" src={news1} height={250} />
+									<Card.Img variant="top" src={news.PhotoUrl} height={250} />
 								</Col>
 								<Col>
 									<Card.Body>

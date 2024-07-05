@@ -9,6 +9,7 @@ export default function Shop() {
 	const [data, setData] = useState([]);
 
 	const src = "images/fb.jpg";
+	const src2 = "images/p1.jpg";
 	useEffect(() => {
 		axios
 			.get("http://localhost:3001/produits/")
@@ -66,9 +67,10 @@ export default function Shop() {
 											<Link to={`${produit.id}`}>
 												<Card.Img
 													variant="top"
-													// src={produit.PhotoUrl1}
-													src={src}
-													width={250}
+													src={produit.PhotoUrl1}
+													// src={src}
+													width={850}
+													height={450}
 												/>
 												<Card.Body>
 													<Card.Title>

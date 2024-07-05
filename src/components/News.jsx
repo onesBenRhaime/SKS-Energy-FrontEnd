@@ -113,8 +113,8 @@ export default function News() {
 								<div key={item.id} className="grid-column">
 									<a className="product" href={`news/${item.id}`}>
 										<div className="product-image">
-											{/* <img src={item.PhotoUrl} alt={item.title} /> */}
-											<img src="images/News1.jpg" alt={item.title} />
+											<img src={item.PhotoUrl} alt={item.title} />
+											{/* <img src="images/News1.jpg" alt={item.title} /> */}
 										</div>
 										<div className="product-content">
 											<div className="product-info">

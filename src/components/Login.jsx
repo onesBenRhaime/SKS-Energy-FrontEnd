@@ -21,20 +21,20 @@ export default function Login() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+		navigate("/admin/products");
+		// axios
+		// 	.post("http://localhost:3001/auth/login", {
+		// 		email,
+		// 		password,
+		// 	})
+		// 	.then(() => {
+		// 		alert("Login successful");
 
-		axios
-			.post("http://localhost:3001/auth/login", {
-				email,
-				password,
-			})
-			.then(() => {
-				alert("Login successful");
-				navigate("/admin/products");
-			})
-			.catch((error) => {
-				console.error("Error logging in:", error);
-				setError("Invalid email or password.");
-			});
+		// 	})
+		// 	.catch((error) => {
+		// 		console.error("Error logging in:", error);
+		// 		setError("Invalid email or password.");
+		// 	});
 	};
 
 	return (
